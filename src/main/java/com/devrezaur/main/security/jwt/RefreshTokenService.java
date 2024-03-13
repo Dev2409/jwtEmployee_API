@@ -16,13 +16,14 @@ public class RefreshTokenService {
 	@Value("${jwt.refreshExp}")
 	private Long refreshTokenDurationMs;
 	@Autowired
-	private RefreshTokenRepository refreshTokenRepository;
+	private static RefreshTokenRepository refreshTokenRepository;
 	@Autowired
 	private UserRepository userRepository;
 
-	public RefreshToken findByRefreshToken(String token) {
+	public static RefreshToken findByRefreshToken(String token) {
 		return refreshTokenRepository.findByRefreshToken(token);
 	}
+
 
 	public RefreshToken createRefreshToken(Long userId) {
 		RefreshToken refreshToken = new RefreshToken();
