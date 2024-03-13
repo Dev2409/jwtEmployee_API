@@ -6,15 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bb4fa8e1-0bdf-4cf1-bf04-65b05a184c69" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/devrezaur/main/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/devrezaur/main/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/devrezaur/main/controller/UserController2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/devrezaur/main/controller/UserController2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/devrezaur/main/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/devrezaur/main/UserControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JWT-refresh-token-spring-boot-v-1.0 alpha.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/JWT-refresh-token-spring-boot-v-1.0 alpha.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JWT-refresh-token-spring-boot-v-1.0 alpha.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/JWT-refresh-token-spring-boot-v-1.0 alpha.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devrezaur/main/controller/EmployeeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devrezaur/main/controller/UserController2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/devrezaur/main/controller/UserController2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.devrezaur.main.JwtRefreshTokenSpringBootApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.devrezaur.main.JwtRefreshTokenSpringBootApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.devrezaur.main.JwtRefreshTokenSpringBootApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.devrezaur.main.JwtRefreshTokenSpringBootApplicationTests.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/devrezaur/main/UserControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/devrezaur/main/UserControllerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,11 +52,13 @@
   "keyToString": {
     "Application.JwtRefreshTokenSpringBootApplication.executor": "Run",
     "DefaultHtmlFileTemplate": "HTML File",
+    "JUnit.AuthTokenTest.executor": "Run",
     "JUnit.JwtRefreshTokenSpringBootApplicationTests.executor": "Run",
     "JUnit.UserController2Test.executor": "Run",
     "JUnit.UserControllerTest.executor": "Run",
     "JUnit.UserControllerTest.getAllUsers_success.executor": "Run",
     "JUnit.UserControllerTest.testCreateUserEndpoint.executor": "Run",
+    "JUnit.UserControllerTest.testGetAllUsersEndpoint.executor": "Run",
     "JUnit.UserControllerTest.testUpdateUserEndpoint.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -87,6 +81,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AuthTokenTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JWT-refresh-token-spring-boot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.devrezaur.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.devrezaur.main" />
+      <option name="MAIN_CLASS_NAME" value="com.devrezaur.main.AuthTokenTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JWT-refresh-token-spring-boot" />
       <extension name="coverage">
@@ -98,22 +107,6 @@
       <option name="PACKAGE_NAME" value="com.devrezaur.main" />
       <option name="MAIN_CLASS_NAME" value="com.devrezaur.main.UserControllerTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserControllerTest.getAllUsers_success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JWT-refresh-token-spring-boot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.devrezaur.main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.devrezaur.main" />
-      <option name="MAIN_CLASS_NAME" value="com.devrezaur.main.UserControllerTest" />
-      <option name="METHOD_NAME" value="getAllUsers_success" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -134,7 +127,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserControllerTest.testUpdateUserEndpoint" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserControllerTest.testGetAllUsersEndpoint" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JWT-refresh-token-spring-boot" />
       <extension name="coverage">
         <pattern>
@@ -144,7 +137,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.devrezaur.main" />
       <option name="MAIN_CLASS_NAME" value="com.devrezaur.main.UserControllerTest" />
-      <option name="METHOD_NAME" value="testUpdateUserEndpoint" />
+      <option name="METHOD_NAME" value="testGetAllUsersEndpoint" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -153,10 +146,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.UserControllerTest" />
-        <item itemvalue="JUnit.UserControllerTest.testCreateUserEndpoint" />
+        <item itemvalue="JUnit.AuthTokenTest" />
+        <item itemvalue="JUnit.UserControllerTest.testGetAllUsersEndpoint" />
         <item itemvalue="Application.JwtRefreshTokenSpringBootApplication" />
-        <item itemvalue="JUnit.UserControllerTest.testUpdateUserEndpoint" />
-        <item itemvalue="JUnit.UserControllerTest.getAllUsers_success" />
+        <item itemvalue="JUnit.UserControllerTest.testCreateUserEndpoint" />
       </list>
     </recent_temporary>
   </component>
@@ -170,5 +163,10 @@
       <updated>1710137619929</updated>
     </task>
     <servers />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/jwtEmployee_API$UserControllerTest.ic" NAME="UserControllerTest Coverage Results" MODIFIED="1710309413530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.devrezaur.main.*</FILTER>
+    </SUITE>
   </component>
 </project>

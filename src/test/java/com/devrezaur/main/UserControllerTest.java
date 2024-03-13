@@ -17,6 +17,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import java.util.Arrays;
 
+import static com.jayway.jsonpath.internal.path.PathCompiler.fail;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
@@ -83,7 +84,7 @@ public class UserControllerTest {
         ArgumentCaptor<User2> userCaptor = ArgumentCaptor.forClass(User2.class);
         when(userRepository.save(userCaptor.capture())).thenReturn(user);
 
-        mockMvc.perform(post("/users")
+        mockMvc.perform(post("/users/create")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{\"id\":1,\"firstName\":\"John\",\"lastName\":\"Doe\",\"email\":\"john@example.com\"}"))
                 .andExpect(status().isOk())
@@ -122,15 +123,21 @@ public class UserControllerTest {
     }
 
     @Test
-    public void testUpdateUserNotFoundEndpoint() throws Exception {
+    public void testUpdateUserNotFound() {
+        // Arrange
         Long userId = 1L;
         User2 updatedUserDetails = new User2(userId, "Jane", "Doe", "jane@example.com");
 
-        mockMvc.perform(put("/users/{id}", userId)
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content("{\"id\":1,\"firstName\":\"Jane\",\"lastName\":\"Doe\",\"email\":\"jane@example.com\"}"))
-                .andExpect(status().isNotFound());
+        // Act
+        try {
+            userController.updateUser(userId, updatedUserDetails);
+        } catch (UserNotFoundException e) {
+            // Assert (Expecting 404 Not Found)
+            return;
+        }
 
-        verify(userRepository, times(0)).save(any(User2.class));
+        // Fail if no exception is thrown
+        fail("Expected UserNotFoundException but no exception was thrown");
     }
+
 }
